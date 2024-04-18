@@ -44,23 +44,9 @@ Once the Launch an instance window opens, provide the name of your EC2 Instance:
 
 
 7. Edit the Network Settings, Create a new Security Group, and allow ssh traffic, HTTPS, and HTTP from anywhere (later on we can modify the rules)
-
-
-
 8. Leave the rest of the options as default and click on the Launch instance button:
-
-
 9. On the screen you can see a success message after the successful creation of the EC2 instance, click on Connect to instance button:
-
-
-
-
-
-
-
 10. Now connect to instance wizard will open, go to SSH client tab and copy the provided chmod and SSH command:
-
-
 11. Open the Command Prompt or PowerShell in your local machine and paste the following two commands and you will be able to access your EC2 machine:
 
 
@@ -74,10 +60,6 @@ Apply pending updates using the yum command:
                           $ sudo yum search docker	
      3. Get version information:
                        $sudo yum info docker
-
-
-Output:
-
 
 4. To install Docker, run
                   $ sudo yum install docker
@@ -93,7 +75,6 @@ Output:
 8. To verify the docker service status on your AMI instance, run
                         $ sudo systemctl status docker.service
 
-
 9. To download and install Compose standalone, run:
    
 sudo curl -SL https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
@@ -105,7 +86,6 @@ sudo curl -SL https://github.com/docker/compose/releases/download/v2.17.2/docker
 
 11. Verify both docker-compose and docker on your AWS Linux AMI:
               
-
 
 Step 3:Deploying a multi-container application using Docker Compose on Amazon EC2
 We will first clone the multi-container application code from the GitHub repo on our EC2 instance with the following command:
@@ -124,8 +104,6 @@ And this:
 
 
 To confirm that both WordPress and db containers are running, run $ docker ps  and you should see an output similar to the image below.
-
-
 
 
 We can also confirm the availability of two separate volumes by running the $ docker volume ls command as shown below: 
